@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craft Hosting - Yakında Sizlerle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            overflow-x: hidden;
+        }
+        
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.5);
+            animation: float 8s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(-10px) translateX(20px);
+            }
+            75% {
+                transform: translateY(-30px) translateX(-10px);
+            }
+        }
+        
+        .glow {
+            filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.8));
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .discord-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .discord-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(30, 64, 175, 0.4);
+        }
+        
+        .discord-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .discord-btn:hover::before {
+            left: 100%;
+        }
+        
+        .server-icon {
+            animation: float 6s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="min-h-screen flex flex-col items-center justify-center relative z-10 px-4">
+        <div class="text-center max-w-3xl mx-auto">
+            <div class="mb-8 server-icon">
+                <svg class="w-24 h-24 mx-auto glow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 6C3 4.34315 4.34315 3 6 3H18C19.6569 3 21 4.34315 21 6V18C21 19.6569 19.6569 21 18 21H6C4.34315 21 3 19.6569 3 18V6Z" stroke="#3b82f6" stroke-width="2"/>
+                    <path d="M7 8H17M7 12H17M7 16H13" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 pulse">
+                <span class="text-blue-500">Craft</span> Hosting
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-blue-200 mb-12">Yakında Sizlerle...</p>
+            
+            <div class="max-w-md mx-auto bg-gray-900 p-6 rounded-xl border border-blue-900 shadow-lg">
+                <p class="text-blue-200 mb-4">Hizmetlerimiz hakkında bilgi almak ve güncellemelerden haberdar olmak için Discord sunucumuza katılın!</p>
+                
+                <a href="https://discord.gg/tTWcx86DK8" target="_blank" class="discord-btn flex items-center justify-center gap-2 py-3 px-6 rounded-lg text-white font-medium text-lg w-full">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                    Discord Sunucumuza Katıl
+                </a>
+            </div>
+        </div>
+        
+        <div class="mt-12 text-blue-300 text-sm">
+            <p>© 2025 Craft Hosting. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+
+    <script>
+
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 20;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                const size = Math.random() * 15 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+        });
+    </script>
+</body>
+</html>
